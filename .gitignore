@@ -33,7 +33,7 @@ bower_components
 build/Release
 
 # Dependency directories
-node_modules
+node_modules/
 jspm_packages/
 
 # TypeScript v1 declaration files
@@ -62,10 +62,9 @@ jspm_packages/
 
 #### ADDED ####
 # Export files
-packages/*/dist/
+# packages/*/dist/
 # Webpack dists
-packages/client/static/build/
+# packages/client/static/build/
 # GraphQL generated files
 packages/*/src/generated/*
 !packages/*/src/generated/.keep
-node_modules
