@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const path = require("../../../node_modules/path");
-const express = require("../../../node_modules/express");
-const request = require("../../../node_modules/request");
-const render = require('../../client');
-const manifest = require('../../client/static/build/manifest.json');
+const path = require("path");
+const express = require("express");
+const request = require("request");
+const render = require('../../packages/client');
+const manifest = require('../../packages/client/static/build/manifest.json');
 const router = express.Router();
 
 // Bind /api/* to original API server
@@ -15,7 +15,7 @@ router.use('/api', function (req, res) {
 });
 // Service worker
 router.use('/sw.js', (_, res) => {
-    res.sendFile(path.resolve(__dirname, '../../client/static/build/sw.js'));
+    res.sendFile(path.resolve(__dirname, '../../packages/client/static/build/sw.js'));
   });
   
   // Progressive web app
