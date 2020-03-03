@@ -36,13 +36,13 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var express = require("../../node_modules/express");
-var cors = require("../../node_modules/cors");
-var i18next_express_middleware_1 = require("../../node_modules/i18next-express-middleware");
-var routes_1 = require("./routes");
-var locale_1 = require("./utils/locale");
-var path = require("path");
-var PORT = process.env.PORT || 3000;
+const express = require("express");
+const cors = require("cors");
+const i18next_express_middleware_1 = require("i18next-express-middleware");
+const routes_1 = require("./routes");
+const locale_1 = require("./utils/locale");
+const path = require("path");
+const PORT = process.env.PORT || 3000;
 (function () { return __awaiter(void 0, void 0, void 0, function () {
     let artsStatic, clientStatic, app;
     return __generator(this, function (_a) {
