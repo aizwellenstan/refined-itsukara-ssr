@@ -25,7 +25,7 @@
     "start": "node packages/server-build/main.js",
     "manage:translations": "i18next-scanner 'packages/**/*.{ts,tsx}'"
   },
-  "devDependencies": {
+  "dependencies": {
     "@types/jest": "^24.0.21",
     "@typescript-eslint/eslint-plugin": "^2.6.0",
     "@typescript-eslint/parser": "^2.5.0",
@@ -105,8 +105,5 @@
       "stylelint",
       "git add"
     ]
-  },
-  "dependencies": {
-    "errorhandler": "^1.5.1"
   }
 }
