@@ -90,7 +90,8 @@
     "typeorm": "^0.2.20",
     "@types/request": "*",
     "request": "*",
-    "path": "*"
+    "path": "*",
+    "errorhandler": ">=1.4.3"
   },
   "husky": {
     "hooks": {
