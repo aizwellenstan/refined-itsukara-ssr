@@ -22,7 +22,7 @@
     "build:gateway": "cd packages/gateway && npm run build",
     "watch:client": "cd packages/client && npm run watch",
     "watch:server": "ts-node packages/server/main.ts",
-    "start": "node packages/server-build/main.js",
+    "start": "ts-node packages/server/main.ts",
     "manage:translations": "i18next-scanner 'packages/**/*.{ts,tsx}'"
   },
   "dependencies": {
