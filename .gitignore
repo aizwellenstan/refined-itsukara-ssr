@@ -66,5 +66,5 @@ jspm_packages/
 # Webpack dists
 # packages/client/static/build/
 # GraphQL generated files
-packages/*/src/generated/*
-!packages/*/src/generated/.keep
+# packages/*/src/generated/*
+# !packages/*/src/generated/.keep

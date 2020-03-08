@@ -12,7 +12,7 @@ import { Search } from 'src/views/search';
 import { Banner } from 'src/components/banner';
 import { GlobalStyle } from 'src/styles/global-style';
 import { Seo } from 'src/components/seo';
-import { GettingStarted } from 'src/components/getting-started';
+// import { GettingStarted } from 'src/components/getting-started';
 
 const Wrapper = styled.main`
   display: flex;
@@ -86,9 +86,7 @@ export const Root = () => {
 
       <GlobalStyle />
 
-      <NoSSR>
-        <GettingStarted />
-      </NoSSR>
+      <NoSSR>{/* <GettingStarted /> */}</NoSSR>
     </>
   );
 };
