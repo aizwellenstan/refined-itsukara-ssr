@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
-import NoSSR from 'react-no-ssr';
+// import NoSSR from 'react-no-ssr';
 import { styled, ThemeContext } from 'src/styles';
 import { Activities } from 'src/views/activities';
 import { renderNotFound } from 'src/views/not-found';
@@ -86,7 +86,9 @@ export const Root = () => {
 
       <GlobalStyle />
 
-      <NoSSR>{/* <GettingStarted /> */}</NoSSR>
+      {/* <NoSSR>
+        <GettingStarted />
+      </NoSSR> */}
     </>
   );
 };
