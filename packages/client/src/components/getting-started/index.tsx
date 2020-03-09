@@ -222,11 +222,7 @@ const Page5 = () => {
         <Description>
           <Trans i18nKey="getting-started.5.description">
             Did you get how to use it? Send questions, feature requests,{' '}
-            improvements, and bug reports to
-            {/* Twitter (
-            <a href="https://twitter.com/TheGodOfNeet">@TheGodOfNeet</a>
-            ）or  */}
-            GitHub (
+            improvements, and bug reports to GitHub (
             <a href="https://github.com/aizwellenstan/refined-itsukara-ssr">
               aizwellenstan/refined-itsukara-ssr
             </a>
