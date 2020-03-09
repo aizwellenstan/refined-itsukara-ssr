@@ -1,14 +1,14 @@
-import agenda from '../../../../arts/static/agenda.png';
-import screenshot from '../../../../arts/static/screenshot.png';
-import timetable from '../../../../arts/static/timetable.png';
-import streamerOrCollab from '../../../../arts/static/streamer-or-collab.png';
-import search from '../../../../arts/static/search.png';
 import React, { useState } from 'react';
 import { useLocalStorage } from 'react-use';
 import { useTranslation, Trans } from 'react-i18next';
 import { styled } from 'src/styles';
 import { Modal } from 'src/components/modal';
 import { MODAL } from 'src/styles/z-indices';
+import search from '../../../../arts/static/search.png';
+import streamerOrCollab from '../../../../arts/static/streamer-or-collab.png';
+import timetable from '../../../../arts/static/timetable.png';
+import screenshot from '../../../../arts/static/screenshot.png';
+import agenda from '../../../../arts/static/agenda.png';
 import { Button } from '../button';
 
 const Wrapper = styled.div`
@@ -222,11 +222,13 @@ const Page5 = () => {
         <Description>
           <Trans i18nKey="getting-started.5.description">
             Did you get how to use it? Send questions, feature requests,{' '}
-            improvements, and bug reports to Twitter (
+            improvements, and bug reports to
+            {/* Twitter (
             <a href="https://twitter.com/TheGodOfNeet">@TheGodOfNeet</a>
-            ）or GitHub (
-            <a href="https://github.com/neet/refined-itsukara-link">
-              neet/refined-itsukara-link
+            ）or  */}
+            GitHub (
+            <a href="https://github.com/aizwellenstan/refined-itsukara-ssr">
+              aizwellenstan/refined-itsukara-ssr
             </a>
             )!
             <br />
