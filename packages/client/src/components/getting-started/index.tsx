@@ -4,8 +4,8 @@ import { useTranslation, Trans } from 'react-i18next';
 import { styled } from 'src/styles';
 import { Modal } from 'src/components/modal';
 import { MODAL } from 'src/styles/z-indices';
-import search from '../../../../arts/static/search.png';
-import streamerOrCollab from '../../../../arts/static/streamer-or-collab.png';
+// import search from '../../../../arts/static/search.png';
+// import streamerOrCollab from '../../../../arts/static/streamer-or-collab.png';
 import timetable from '../../../../arts/static/timetable.png';
 import screenshot from '../../../../arts/static/screenshot.png';
 import agenda from '../../../../arts/static/agenda.png';
@@ -142,66 +142,66 @@ const Page2 = () => {
   );
 };
 
-const Page3 = () => {
-  const { t } = useTranslation();
+// const Page3 = () => {
+//   const { t } = useTranslation();
 
-  return (
-    <>
-      <Thumbnail
-        style={{ backgroundImage: `url(${streamerOrCollab})` }}
-        title={t('getting-started.3.title', {
-          defaultValue: 'Streamers and Collabs',
-        })}
-      />
+//   return (
+//     <>
+//       <Thumbnail
+//         style={{ backgroundImage: `url(${streamerOrCollab})` }}
+//         title={t('getting-started.3.title', {
+//           defaultValue: 'Streamers and Collabs',
+//         })}
+//       />
 
-      <Content>
-        <Title>
-          {t('getting-started.3.title', {
-            defaultValue: 'Streamers and Collabs',
-          })}
-        </Title>
-        <Description>
-          <Trans i18nKey="getting-started.3.description">
-            The advantage of Refined Itsukara.link is{' '}
-            <strong>not just the design</strong>.<br />
-            We also have a page which makes us possible to{' '}
-            <strong>explore streams by a streamer or a collaboration</strong>.
-            Try it out when there are too many streams to find the desired one!
-          </Trans>
-        </Description>
-      </Content>
-    </>
-  );
-};
+//       <Content>
+//         <Title>
+//           {t('getting-started.3.title', {
+//             defaultValue: 'Streamers and Collabs',
+//           })}
+//         </Title>
+//         <Description>
+//           <Trans i18nKey="getting-started.3.description">
+//             The advantage of Refined Itsukara.link is{' '}
+//             <strong>not just the design</strong>.<br />
+//             We also have a page which makes us possible to{' '}
+//             <strong>explore streams by a streamer or a collaboration</strong>.
+//             Try it out when there are too many streams to find the desired one!
+//           </Trans>
+//         </Description>
+//       </Content>
+//     </>
+//   );
+// };
 
-const Page4 = () => {
-  const { t } = useTranslation();
+// const Page4 = () => {
+//   const { t } = useTranslation();
 
-  return (
-    <>
-      <Thumbnail
-        style={{ backgroundImage: `url(${search})` }}
-        title={t('getting-started.4.title', { defaultValue: 'Search' })}
-      />
+//   return (
+//     <>
+//       <Thumbnail
+//         style={{ backgroundImage: `url(${search})` }}
+//         title={t('getting-started.4.title', { defaultValue: 'Search' })}
+//       />
 
-      <Content>
-        <Title>
-          {t('getting-started.4.title', {
-            defaultValue: 'Search',
-          })}
-        </Title>
-        <Description>
-          <Trans i18nKey="getting-started.4.description">
-            Of course, we have <strong>search feature</strong> too. By typing a{' '}
-            keyword, you can search for{' '}
-            <strong>categories, streamers, collaborations, streams</strong> so
-            that you will not miss your favourite stream.
-          </Trans>
-        </Description>
-      </Content>
-    </>
-  );
-};
+//       <Content>
+//         <Title>
+//           {t('getting-started.4.title', {
+//             defaultValue: 'Search',
+//           })}
+//         </Title>
+//         <Description>
+//           <Trans i18nKey="getting-started.4.description">
+//             Of course, we have <strong>search feature</strong> too. By typing a{' '}
+//             keyword, you can search for{' '}
+//             <strong>categories, streamers, collaborations, streams</strong> so
+//             that you will not miss your favourite stream.
+//           </Trans>
+//         </Description>
+//       </Content>
+//     </>
+//   );
+// };
 
 const Page5 = () => {
   const { t } = useTranslation();
@@ -227,7 +227,7 @@ const Page5 = () => {
               aizwellenstan/refined-itsukara-ssr
             </a>
             )!
-            <br />
+            {/* <br /> */}
             The project is open source software and we are looking for{' '}
             contributors who can implement better! Enjoy!
           </Trans>
@@ -238,7 +238,9 @@ const Page5 = () => {
 };
 
 // eslint-disable-next-line react/jsx-key
-const index = [<Page1 />, <Page2 />, <Page3 />, <Page4 />, <Page5 />];
+// const index = [<Page1 />, <Page2 />, <Page3 />, <Page4 />, <Page5 />];
+// eslint-disable-next-line react/jsx-key
+const index = [<Page1 />, <Page2 />, <Page5 />];
 
 export const GettingStarted = () => {
   const { t } = useTranslation();
@@ -246,7 +248,8 @@ export const GettingStarted = () => {
 
   // prettier-ignore
   const [hasGotStarted, setHasGotStarted]= useLocalStorage('has-got-started', false);
-  const done = hasGotStarted || page > 5;
+  // const done = hasGotStarted || page > 5;
+  const done = hasGotStarted || page > index.length;
 
   const handleNext = () => {
     if (page + 1 >= index.length) {
